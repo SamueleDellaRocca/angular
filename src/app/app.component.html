@@ -11,15 +11,24 @@
 <div class="container">
   <h1>Disponibile adesso per il pranzo</h1>
   <div class="flexato">
-    <app-card *ngFor="let ristorante of ristoranti?.array"></app-card>
+    <app-card
+      *ngFor="let ristorante of ristoranti?.array"
+      [ristoranti]="ristoranti?.array"
+      [nome]="ristorante.restaurantName"
+      [company]="ristorante.companyName"
+      [cucine]="ristorante.cuisine"
+      [telefono]="ristorante.phone"
+      [city]="ristorante.geolocation.city"
+      [address]="ristorante.geolocation.address"
+    ></app-card>
   </div>
   <div>
-    <mat-paginator
-      [length]="100"
-      [pageSize]="10"
-      [pageSizeOptions]="[5, 10, 25, 100]"
-      aria-label="Select page"
-    >
-    </mat-paginator>
+    <p-paginator
+      (onPageChange)="onPageChange($event)"
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="120"
+      [rowsPerPageOptions]="[10, 20, 30]"
+    ></p-paginator>
   </div>
 </div>

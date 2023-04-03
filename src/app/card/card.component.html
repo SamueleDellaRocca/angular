@@ -1,22 +1,22 @@
 <mat-card class="example-card">
   <mat-card-header style="background-color: lightgray">
-    <mat-card-title>{{ ristoranti[0].restaurantName }}</mat-card-title>
-    <mat-card-subtitle>{{ ristoranti[0].companyName }}</mat-card-subtitle>
+    <mat-card-title>{{ nome }}</mat-card-title>
+    <mat-card-subtitle>{{ company }}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="assets/ristorante.jpg" alt="Photo of a Shiba Inu" />
   <mat-card-content>
     <div>
       <span style="font-weight: bold"> Tipologia cucina: </span><br />
-      <span *ngFor="let cucina of ristoranti[0].cuisine">{{ cucina }} </span>
+      <span *ngFor="let cucina of cucine">{{ cucina }} </span>
     </div>
     <div>
       <span style="font-weight: bold"> Numero di telefono: </span><br />
-      <span>{{ ristoranti[0].phone }} </span>
+      <span>{{ telefono }} </span>
     </div>
     <div>
       <span style="font-weight: bold"> Indirizzo: </span><br />
-      <span>{{ ristoranti[0].geolocation.city }} </span><br />
-      <span>{{ ristoranti[0].geolocation.address }} </span>
+      <span>{{ city }} </span><br />
+      <span>{{ address }} </span>
     </div>
   </mat-card-content>
   <mat-card-actions>

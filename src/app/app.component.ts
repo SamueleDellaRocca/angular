@@ -9,7 +9,8 @@ import { OpentableService } from './opentable.service';
 })
 export class AppComponent implements OnInit {
   title = 'angular';
-
+  first = 1;
+  rows = 11;
 
   ristoranti: any;
 
@@ -17,7 +18,20 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
-    this.opentable.getPosts()
+    this.opentable.getPosts(this.first, this.rows)
+      .subscribe(response => {
+        this.ristoranti = response;
+        console.log(this.ristoranti.array);
+      });
+  }
+
+  onPageChange(event: any) {
+    console.log(event);
+    console.log(event.page);
+    this.first = event.page;
+    this.rows = event.rows;
+
+    this.opentable.getPosts(this.first, this.rows)
       .subscribe(response => {
         this.ristoranti = response;
         console.log(this.ristoranti.array);

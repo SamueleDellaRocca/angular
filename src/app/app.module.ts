@@ -15,6 +15,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+// ANGULAR PRIME NG
+import { PaginatorModule } from 'primeng/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatInputModule,
     MatIconModule,
     MatPaginatorModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
