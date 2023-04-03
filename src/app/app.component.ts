@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
+    // CHIAMATA ALL'API
     this.opentable.getPosts(this.page, this.rows)
       .subscribe(response => {
         this.ristoranti = response;
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
       });
   }
 
+  // CHIAMATA ALL'API DINAMICA IN BASE ALLA PAGINAZIONE
   onPageChange(event: any) {
     console.log(event);
     this.page = event.page;
