@@ -6,19 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OpentableService {
 
-  constructor(private http: HttpClient) { }
+  private url = 'http://localhost:5000/api/restaurant/getRestaurants/1/11';
 
-  search(term: string) {
-    return this.http.get('https://en.wikipedia.org/w/api.php', {
-      params: {
-        action: 'query',
-        format: 'json',
-        list: 'search',
-        utf8: 1,
-        srsearch: term,
-        origin: "*",
-      }
-    })
+  constructor(private httpClient: HttpClient) { }
+
+  getPosts() {
+    return this.httpClient.get(this.url);
   }
 
 }
