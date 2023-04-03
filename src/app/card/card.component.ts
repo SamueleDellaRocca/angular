@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
 })
-export class AppComponent {
-  title = 'angular';
+export class CardComponent {
 
   ristoranti = [
     {
@@ -528,4 +527,5 @@ export class AppComponent {
       "email": "oko@Brown Shoe Company Inc.com"
     }
   ]
+
 }

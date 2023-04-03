@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+// toolbar con input
+.toolbar{
+  height: 250px;
+  background-color: #1c2950;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.example-form-field {
+  width: 500px;
+}
+
+.titolo {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+// container per le card
+.container {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.flexato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
